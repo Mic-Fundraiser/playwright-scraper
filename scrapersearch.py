@@ -2,7 +2,7 @@ import streamlit as st
 from playwright.sync_api import sync_playwright
 import pandas as pd
 
-def fetch_google_results(keyword, headless=True):
+def fetch_google_results(keyword, headless=False):
     results = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=headless)
